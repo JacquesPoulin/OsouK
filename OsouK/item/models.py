@@ -3,7 +3,6 @@ from django.db import models
 
 class Category(models.Model):
   name = models.CharField(max_length=255)
-  
   class Meta:
     ordering = ('name',)
     verbose_name_plural = "Categories"
@@ -21,8 +20,6 @@ class Item(models.Model):
   is_sold = models.BooleanField(default=False)
   created_by = models.ForeignKey(User, related_name="items", on_delete=models.CASCADE)
   created_at = models.DateTimeField(auto_now_add=True)
-  
-  
   class Meta:
     ordering = ('name',)
     verbose_name_plural = "Items"
