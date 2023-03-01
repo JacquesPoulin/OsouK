@@ -6,6 +6,6 @@ Site proposant une market place de vente de sneakers / Projet perso
 - SignUp/Login
 
 
-ETAPE : <br/>
+ETAPES : <br/>
  1/ Cloner le repo <br/>
  2/ python manage.py runserver
