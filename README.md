@@ -1,5 +1,6 @@
 # OsouK
-Site proposant une market place de vente de sneakers / Projet perso
+
+SNEAKERS MARKET PLACE/ Projet perso (python / django)
 
 - CRUD operations
 
