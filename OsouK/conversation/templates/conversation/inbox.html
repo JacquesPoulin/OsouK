@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %} 
+
+{% block title %} Boite de récéption {% endblock%}
+
+
+{%block content %}
+
+  <h1 class="text-center mb-6 text-3xl">
+    - Fil de discussions -
+  </h1>
+
+  {% if not conversations %}
+    <p class = "text-center">
+      Vous n'avez pas de nouveaux messages ...
+    </p>
+  {% endif %}
+
+  <div class="space-y-6">
+    
+    {% for conversation in conversations  %}
+      <a href={% url "conversation:detail" conversation.id %}>
+        <div class="py-6 flex bg-gray-100 rounded-xl">
+
+          <div class="pr-6">
+            <img src={{conversation.item.image.url}} alt="" class="w-24 ml-4 rounded-xl">
+          </div>
+
+          <div>
+            {% for member in conversation.members.all %}
+              {% if member != request.user %}
+                <p class="mb-4">
+                  <strong>
+                    {{member.username}} | {{conversation.modified_at}}
+                  </strong>
+                </p>
+                <p>
+                  {{conversation.item.name}}
+                </p>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+        </div>
+      </a>
+    {% endfor %}
+  
+
+
+  </div>
+
+{% endblock %}
