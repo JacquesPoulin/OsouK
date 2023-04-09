@@ -71,7 +71,7 @@ def detail(request, pk):
       conversation_message.save()
       conversation.save()
       
-      return redirect('conversation:detail.html', pk=pk)
+      return redirect('conversation:detail', pk=pk)
 
   else:
     form = ConversationMessageForm()
@@ -79,4 +79,9 @@ def detail(request, pk):
   return render(request, 'conversation/detail.html', {
     "conversation" : conversation,
     "form" : form,
-  })  
+  })
+
+
+
+
+

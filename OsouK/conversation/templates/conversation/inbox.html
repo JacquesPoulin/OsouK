@@ -18,11 +18,11 @@
   <div class="space-y-6">
     
     {% for conversation in conversations  %}
-      <a href={% url "conversation:detail" conversation.id %}>
+      <a href="{% url 'conversation:detail' conversation.id %}">
         <div class="py-6 flex bg-gray-100 rounded-xl">
 
           <div class="pr-6">
-            <img src={{conversation.item.image.url}} alt="" class="w-24 ml-4 rounded-xl">
+            <img src="{{conversation.item.image.url}}" alt="" class="w-24 ml-4 rounded-xl">
           </div>
 
           <div>
