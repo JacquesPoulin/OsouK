@@ -1,5 +1,5 @@
 asgiref==3.6.0
 django-binary-database-files==1.0.16
-Pillow==9.4.0
+Pillow==10.0.1
 sqlparse==0.4.3
 tzdata==2022.7
